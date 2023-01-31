@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_main_labelMine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_main_inputUsernameMine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0tbx8pkcaz@vnpost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_main_labelMine" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_main_inputPasswordMine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8d79bcbd5b893571c47c04596ebf3a5443ebdd2e"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_main_inputUsernameMine" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_main_labelSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_main_inputPasswordMine" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_main_inputUsernameSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3yaam21qoi@vnpost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_main_labelSend" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_main_inputPasswordSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="64d15e00b35881b9a26c460c1ab813761ec31e4a"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_main_inputUsernameSend" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_main_connectUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connect"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_main_inputPasswordSend" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_main_typing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="is typing ..."
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/bt_main_connectUser"
+        app:layout_constraintStart_toEndOf="@id/bt_main_connectUser"
+        app:layout_constraintTop_toTopOf="@id/bt_main_connectUser" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_main_listMess"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/bt_main_sendMess"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_main_connectUser" />
+
+    <EditText
+        android:id="@+id/edt_main_inputMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/bt_main_sendMess"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_main_sendMess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEND"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
